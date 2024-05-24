@@ -33,6 +33,21 @@ app.post('/books',async(request,response)=>{
     }
 });
 
+// Get all the books from database
+app.get('/books',async(request,response)=>{
+    try{
+        const books = await Book.find({});
+        return response.status(200).json({
+            count : books.length,
+            data : books
+        });
+    }
+    catch(error){
+        console.error("ERROR FINDING ALL BOOKS!!" ,error.message);
+        return response.status(500).send({message:error.message});
+    }
+})
+
 // Get Details of a Book
 app.get('/books/:id',async(request,response)=>{
     try{
@@ -48,17 +63,23 @@ app.get('/books/:id',async(request,response)=>{
     }
 })
 
-// Get all the books from database
-app.get('/books',async(request,response)=>{
+// Update a Book 
+app.put('/books/:id',async(request,response)=>{
     try{
-        const books = await Book.find({});
-        return response.status(200).json({
-            count : books.length,
-            data : books
-        });
+        if(
+            !request.body.title || !request.body.author || !request.body.publishYear
+        ) {
+            return response.status(400).send({message:'Please give all the requied fields: title, author, publishYear'})
+        }
+        const { id } = request.params;
+        const result = await Book.findByIdAndUpdate(id,request.body);
+        if(!result){
+            return response.status(404).json({message:"Error in Finding and Updating the book"})
+        }
+        return response.status(200).send({message:"Book updated Successfully"})
     }
     catch(error){
-        console.error("ERROR FINDING ALL BOOKS!!" ,error.message);
+        console.error("ERROR UPDATING BOOK!!" ,error.message);
         return response.status(500).send({message:error.message});
     }
 })

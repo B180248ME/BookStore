@@ -3,6 +3,8 @@ import { PORT, MongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import { Book } from "./models/bookModel.js";
 
+app.use(express.json())
+
 const app = express();
 app.get('/',(request,response)=>{
     console.log("MERN STACK");
@@ -13,7 +15,7 @@ app.get('/',(request,response)=>{
 app.post('/books',async(request,response)=>{
     try{
         if(
-            !request.body.title || request.body.author || request.body.publishYear
+            !request.body.title || !request.body.author || !request.body.publishYear
         ) {
             return response.status(400).send({message:'Please give all the requied fields: title, author, publishYear'})
         }

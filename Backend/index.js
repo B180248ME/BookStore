@@ -73,8 +73,9 @@ app.put('/books/:id',async(request,response)=>{
         }
         const { id } = request.params;
         const result = await Book.findByIdAndUpdate(id,request.body);
+        console.log(result);
         if(!result){
-            return response.status(404).json({message:"Error in Finding and Updating the book"})
+            return response.status(404).json({message:"Error in Finding the book"})
         }
         return response.status(200).send({message:"Book updated Successfully"})
     }
@@ -84,6 +85,22 @@ app.put('/books/:id',async(request,response)=>{
     }
 })
 
+// Delete a Book
+app.delete('/books/:id',async(request,response)=>{
+    try{
+        const { id } = request.params;
+        const result = await Book.findByIdAndDelete(id);
+        console.log(result);
+        if(!result){
+            return response.status(404).json({message:"Error in Finding the book"})
+        }
+        return response.status(200).send({message:"Book deleted Successfully"})
+    }
+    catch(error){
+        console.error("ERROR DELETING BOOK!!" ,error.message);
+        return response.status(500).send({message:error.message});
+    }
+})
 mongoose
     .connect(MongoDBURL)
     .then(()=>{

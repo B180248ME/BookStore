@@ -11,7 +11,7 @@ app.get('/',(request,response)=>{
     return response.status(245).send("Message with Http");
 })
 
-// Get All Book
+// Add Book to database
 app.post('/books',async(request,response)=>{
     try{
         if(
@@ -33,6 +33,22 @@ app.post('/books',async(request,response)=>{
     }
 });
 
+// Get Details of a Book
+app.get('/books/:id',async(request,response)=>{
+    try{
+        const { id } = request.params;
+        const book = await Book.findById(id);
+        return response.status(200).json({
+            book
+        });
+    }
+    catch(error){
+        console.error("ERROR FINDING BOOK!!" ,error.message);
+        return response.status(500).send({message:error.message});
+    }
+})
+
+// Get all the books from database
 app.get('/books',async(request,response)=>{
     try{
         const books = await Book.find({});
@@ -42,7 +58,7 @@ app.get('/books',async(request,response)=>{
         });
     }
     catch(error){
-        console.error("ERROR FINDING BOOK!!" ,error.message);
+        console.error("ERROR FINDING ALL BOOKS!!" ,error.message);
         return response.status(500).send({message:error.message});
     }
 })

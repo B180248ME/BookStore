@@ -20,7 +20,7 @@ app.use(cors())
 // }))
 
 app.get('/',(request,response)=>{
-    console.log("MERN STACK");
+    console.log("Loading the Page with Message !!!");
     return response.status(245).send("Message with Http");
 })
 // To access all the routes 

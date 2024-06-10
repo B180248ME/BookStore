@@ -33,7 +33,6 @@ const CreateBooks = () => {
 
   return (
     <div className='p-4'>
-      <p>HII</p>
     <BackButton />
     <h1 className='text-3xl my-4'>Create Book</h1>
     {loading ? <Spinner /> : ''}

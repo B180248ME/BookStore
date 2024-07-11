@@ -1,14 +1,23 @@
+# Streaming Data Analysis using Kafka 
 
+## Introduction 
+Create a Website to store details of books and perform create, delete and update oprations.
+Execute an End-To-End Data Engineering Project on Real-Time Stock Market Data using Kafka.
 
---- CORS Policy ---
+Used different technologies such as Node js, Vite js, and Mongodb.
+
+## Architecture 
+<img src="Architecture.png">
+
+## Notes
+- CORS Policy 
 Cross-Origin Resource Sharing
 It is a secure mechanism in web browsers that restricts unauthorized access 
 
---- vite ---
+- vite
 Choosing between Vite and Create React App (CRA) is pivotal in 2024. While CRA offers simplicity and strong React support, Vite stands out for speed and flexibility. Vite's quick build and hot reloading, along with multi-framework support, make it ideal for larger projects.
 
---- Tailwind CSS ---
+- Tailwind CSS 
 Working with Tailwind CSS encourages a more direct approach to styling. Instead of moving between HTML files and separate CSS stylesheets, developers can apply styles right within the HTML. This makes designing quicker and simpler. Tailwind CSS isn't tied to a specific JavaScript framework.
 
---- rafce ---
-'rafce', creates a react arrow function export component. Snippet. rafce. output. import React from 'react' const test = () => { return ( <div>test</div> ) } export default test.
+

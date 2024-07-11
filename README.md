@@ -1,4 +1,4 @@
-# Streaming Data Analysis using Kafka 
+# BookStore App 
 
 ## Introduction 
 Create a Website to store details of books and perform create, delete and update oprations.

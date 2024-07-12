@@ -20,4 +20,16 @@ Choosing between Vite and Create React App (CRA) is pivotal in 2024. While CRA o
 - Tailwind CSS 
 Working with Tailwind CSS encourages a more direct approach to styling. Instead of moving between HTML files and separate CSS stylesheets, developers can apply styles right within the HTML. This makes designing quicker and simpler. Tailwind CSS isn't tied to a specific JavaScript framework.
 
+- Express is backend server
+- nodemon is to restart server automatically when changes made
+
+### terminal
+- server with express.js
+- npm init to create base .json file
+- npm create vite -> instead of npm create-react-app
+
+
+
+
+
 

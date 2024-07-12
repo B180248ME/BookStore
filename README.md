@@ -9,6 +9,13 @@ Used different technologies such as Node js, Vite js, and Mongodb.
 ## Architecture 
 <img src="Architecture.png">
 
+## Run Application
+### In Development
+- Frontend
+cd Frontend -> npm run dev
+- Backend
+cd Backend -> npm run dev
+
 ## Notes
 - CORS Policy 
 Cross-Origin Resource Sharing

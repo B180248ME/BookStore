@@ -22,3 +22,5 @@ To Build Backend Docker Image
 cd Backend/
 docker build -f Backend.Dockerfile -t bookstorebackend:latest .
 docker image ls
+To Run the build image
+docker run -p 5555:5555 bookstorebackend:latest

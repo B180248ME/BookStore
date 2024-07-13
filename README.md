@@ -15,6 +15,11 @@ Used different technologies such as Node js, Vite js, and Mongodb.
 cd Frontend -> npm run dev
 - Backend
 cd Backend -> npm run dev
+### In Development
+- Frontend
+cd Frontend -> npm start
+- Backend
+cd Backend -> npm start
 
 ## Notes
 - CORS Policy 
@@ -34,6 +39,10 @@ Working with Tailwind CSS encourages a more direct approach to styling. Instead 
 - server with express.js
 - npm init to create base .json file
 - npm create vite -> instead of npm create-react-app
+
+## Resources
+https://medium.com/@srijaanaparthy/step-by-step-guide-to-install-docker-on-amazon-linux-machine-in-aws-a690bf44b5fe
+
 
 
 

@@ -1,0 +1,12 @@
+ssh command - to connect to the ec2 machine
+sudo su - to get all the admin access other then the ec2 user access
+cat /etc/os-release - to get all congifuration of machine
+
+docker installation commands in aws linux
+sudo yum update -y
+sudo yum install docker -y
+After installing Docker, you will need to start the Docker service:
+sudo systemctl start docker
+
+git installation commands in aws linux
+sudo yum install git -y

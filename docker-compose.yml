@@ -23,7 +23,6 @@ services:
       - "5555:5555"
     depends_on:
       - mongodb
-      - frontend
 
   frontend:
     image: bookstorefrontend:latest

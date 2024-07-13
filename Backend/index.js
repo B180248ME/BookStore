@@ -36,7 +36,7 @@ mongoose
         })
     })
     .catch((error)=>{
-        console.error("ALERT ERROR !!" ,error);
+        console.error("Error While Connecting with Database" ,error);
     })
 
 

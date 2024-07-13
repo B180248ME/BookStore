@@ -24,3 +24,15 @@ docker build -f Backend.Dockerfile -t bookstorebackend:latest .
 docker image ls
 To Run the build image
 docker run -p 5555:5555 bookstorebackend:latest
+
+Stop Container
+docker container <containerid>
+
+To Build Backend Docker Image
+cd Frontend/
+docker build -f Frontend.Dockerfile -t bookstorefrontend:latest .
+docker image ls
+To Run the build image
+docker run -p 3000:3000 bookstorefrontend:latest
+
+install mongodb image in docker refering the resources in readme.md

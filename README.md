@@ -41,7 +41,10 @@ Working with Tailwind CSS encourages a more direct approach to styling. Instead 
 - npm create vite -> instead of npm create-react-app
 
 ## Resources
-https://medium.com/@srijaanaparthy/step-by-step-guide-to-install-docker-on-amazon-linux-machine-in-aws-a690bf44b5fe
+- https://medium.com/@srijaanaparthy/step-by-step-guide-to-install-docker-on-amazon-linux-machine-in-aws-a690bf44b5fe
+- https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/
+
+
 
 
 

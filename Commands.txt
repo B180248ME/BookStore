@@ -45,6 +45,12 @@ sudo yum install docker-compose-plugin
 
 install mongodb image in docker refering the resources in readme.md
 
+to edit a file in virtual machine
+
+vim / sudo vim <filename>
+I - to changes
+:wq / !w - to exit
+
 
 
 -----------------------------------to docker-compose in gcp - for GCP compute engine image is container optimized (docker and git preinstalled)

@@ -12,7 +12,7 @@ function ShowBook() {
   useEffect(()=>{
     setLoading(true);
     axios
-       .get(`api/books/${id}`)
+       .get(`/api/books/${id}`)
        .then((response)=>{
         setBook(response.data.book);
         setLoading(false);

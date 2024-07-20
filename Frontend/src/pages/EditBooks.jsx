@@ -15,7 +15,7 @@ const EditBooks = () => {
   const { enqueueSnackbar } = useSnackbar();
   useEffect(() => {
     setLoading(true);
-    axios.get(`api/books/${id}`)
+    axios.get(`/api/books/${id}`)
     .then((response) => {
         console.log(response.data,"Edit")
         setAuthor(response.data.book.author);
@@ -37,7 +37,7 @@ const EditBooks = () => {
     };
     setLoading(true);
     axios
-      .put(`api/books/${id}`, data)
+      .put(`/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Edited successfully', { variant: 'success' });

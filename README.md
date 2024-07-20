@@ -58,13 +58,11 @@ AWS EC2 offers a scalable and reliable infrastructure to host your application, 
 By default, MongoDB listens on port 27017. You can configure MongoDB to allow remote connections if needed by editing the MongoDB configuration file.
 <img src="MongodbSetup.jpg">
 1. sudo nano /etc/mongod.conf (Open the MongoDB configuration file)
-2. Update the `bindIp` setting to allow connections from any IP address (optional):
-   ```yaml
+2. Update the bindIp setting to allow connections from any IP address (optional):
    # network interfaces
    net:
      port: 27017
      bindIp: 0.0.0.0  # default is 127.0.0.1
-   ```
 3. sudo systemctl restart mongod (Restart MongoDB to apply changes)
 
 ### Step 6: Update Security Group for EC2
@@ -77,12 +75,9 @@ Ensure your EC2 instance’s security group allows inbound traffic on MongoDB’
 ### Step 7: Connect Your Application to MongoDB
 In your MERN application's backend, configure the MongoDB connection (used mongoose in backend)
 - Update your `default.json` configuration file:
-   ```json
-   // config/default.json
    {
      "mongoURI": "mongodb://localhost:27017/yourdbname"
    }
-   ```
 
 ### Step 8: Start Application
 - cd Frontend -> npm install

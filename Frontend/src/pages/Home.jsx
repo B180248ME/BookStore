@@ -16,7 +16,7 @@ function Home() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('http://localhost:5555/books')
+      .get('api/books')
       .then((response) => {
         console.log(response.data, "Data")
         setBooks(response.data.data);

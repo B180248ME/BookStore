@@ -58,7 +58,7 @@ By default, MongoDB listens on port 27017. You can configure MongoDB to allow re
 <img src="MongodbSetup.jpg">
 1. sudo nano /etc/mongod.conf (Open the MongoDB configuration file)
 2. Update the bindIp setting to allow connections from any IP address (optional):
-   # network interfaces
+   - network interfaces
    net:
      port: 27017
      bindIp: 0.0.0.0  # default is 127.0.0.1

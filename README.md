@@ -1,8 +1,7 @@
 # BookStore App 
 
 ## Development
-Create a Website to store details of books and perform create, delete and update oprations.
-Execute an End-To-End Data Engineering Project on Real-Time Stock Market Data using Kafka.
+Created a Website to store details of books and perform create, delete and update operations.
 Used different technologies such as Node js, Vite js, and Mongodb.
 
 ### Architecture 
